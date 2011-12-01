@@ -7,7 +7,7 @@ server = TCPServer.new($config.port)
 
 client = server.accept
 
-benchmark do |expectedMessage|
+benchmark(:sub) do |expectedMessage|
   msg = client.readline
   puts msg
 end

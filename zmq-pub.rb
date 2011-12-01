@@ -14,7 +14,7 @@ gets
 
 socket.send("start")
 
-benchmark do |message|
+benchmark(:pub) do |message|
   socket.send("log " + message)
 end
 

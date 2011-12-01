@@ -1,5 +1,5 @@
 {
-    "iterations": 1000000,
-    "message": "hello world\n",
+    "iterations": 10000,
+    "message": "@message.data",
     "port": 10101
 }

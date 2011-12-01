@@ -6,6 +6,6 @@ b = Bunny.new
 b.start
 exch = b.exchange('log')
 
-benchmark do |message|
+benchmark(:pub) do |message|
   exch.publish(message)
 end

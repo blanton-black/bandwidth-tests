@@ -10,6 +10,6 @@ udp.bind('localhost', $config.port)[0]
 # get start
 udp.recvfrom(1024)[0]
 
-benchmark do |expectedMessage|
+benchmark(:sub) do |expectedMessage|
   puts udp.recvfrom(1024)[0]
 end

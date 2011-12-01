@@ -2,6 +2,6 @@
 
 require './benchmark'
 
-benchmark do |message|
+benchmark(:pub) do |message|
   puts message
 end

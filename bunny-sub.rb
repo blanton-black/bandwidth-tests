@@ -10,7 +10,7 @@ q = b.queue('log')
 if true
   puts "press enter once publisher is ready..."
   gets
-  benchmark do |expectedMessage|
+  benchmark(:sub) do |expectedMessage|
     msg = q.pop[:payload]
     puts msg
   end

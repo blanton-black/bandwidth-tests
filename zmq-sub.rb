@@ -16,7 +16,7 @@ socket.setsockopt(ZMQ::SUBSCRIBE, 'log')
 msg = socket.recv()
 puts msg
 
-benchmark do |expectedMessage|
+benchmark(:sub) do |expectedMessage|
   msg = socket.recv()
   puts msg
 end

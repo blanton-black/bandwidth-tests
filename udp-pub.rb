@@ -9,7 +9,7 @@ udp = UDPSocket.open
 
 udp.send("start", 0, "localhost", $config.port)
 
-benchmark do |message|
+benchmark(:pub) do |message|
   udp.send(message, 0, "localhost", $config.port)
 end
 

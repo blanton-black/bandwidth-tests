@@ -5,7 +5,7 @@ require 'socket'
 
 tcp = TCPSocket.new('localhost', $config.port)
 
-benchmark do |message|
+benchmark(:pub) do |message|
   tcp.write(message)
 end
 
