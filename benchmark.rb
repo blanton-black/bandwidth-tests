@@ -15,4 +15,8 @@ def benchmark
   averageTime = totalTime/$config.iterations
   $stderr.puts "total: #{totalTime} s"
   $stderr.puts "avg: #{averageTime * 1000} ms"
+  totalBytes = $config.message.size * $config.iterations
+  totalMB = totalBytes / 1000000
+  $stderr.puts "total: #{totalMB} MB"
+  $stderr.puts "speed: #{totalMB/totalTime} MB/s"
 end
