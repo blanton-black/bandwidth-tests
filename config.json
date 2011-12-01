@@ -1,4 +1,5 @@
 {
-    iterations: 1000,
-    message: "hello world"
+    "iterations": 1000000,
+    "message": "hello world\n",
+    "port": 10101
 }

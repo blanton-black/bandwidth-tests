@@ -1,7 +1,9 @@
 require 'json'
 require 'ostruct'
+require 'bundler'
+Bundler.require
 
-$config = OpenStruct.new(eval(File.read('config.json')))
+$config = OpenStruct.new(JSON.parse(File.read('config.json')))
 
 def benchmark
   t0 = Time.now
@@ -11,6 +13,6 @@ def benchmark
   t1 = Time.now
   totalTime = t1 - t0
   averageTime = totalTime/$config.iterations
-  puts "total: #{totalTime} s"
-  puts "avg: #{averageTime * 1000} ms"
+  $stderr.puts "total: #{totalTime} s"
+  $stderr.puts "avg: #{averageTime * 1000} ms"
 end
